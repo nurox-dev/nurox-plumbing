@@ -1,4 +1,4 @@
-# nurox-plumbing-clone-main
+# nurox-plumbing
 
 ## Project info
 
