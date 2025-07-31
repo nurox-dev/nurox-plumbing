@@ -1,0 +1,8 @@
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red Star Shape -->
+  <polygon points="50,20 60,40 80,40 65,55 70,75 50,65 30,75 35,55 20,40 40,40" 
+           fill="#FF0000" stroke="none"/>
+  <!-- Text -->
+  <text x="90" y="40" font-family="Arial" font-size="24" font-weight="bold" fill="#000000">NUROX</text>
+  <text x="90" y="70" font-family="Arial" font-size="24" font-weight="bold" fill="#000000">PLUMBING</text>
+</svg>
