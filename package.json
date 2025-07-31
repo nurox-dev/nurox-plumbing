@@ -1,7 +1,7 @@
 {
   "homepage": "https://nurox-dev.github.io/nurox-plumbing/",
   "name": "vite_react_shadcn_ts",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
