@@ -33,7 +33,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <img src="/nurox-logo.svg" alt="Nurox Plumbing Logo" className="h-16 w-auto mb-4" />
+              <img src={`${import.meta.env.BASE_URL}nurox-logo.svg`} alt="Nurox Plumbing Logo" className="h-16 w-auto mb-4" />
               <p className="text-gray-300 leading-relaxed">
                 Your trusted local plumbing experts with over 25 years of experience. 
                 We provide reliable, professional plumbing services 24/7.

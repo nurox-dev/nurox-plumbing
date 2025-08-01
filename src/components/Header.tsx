@@ -40,7 +40,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-1">
             {/* Logo */}
             <div className="flex items-center">
-              <img src="/nurox-logo.svg" alt="Nurox Plumbing Logo" className="h-20 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}nurox-logo.svg`} alt="Nurox Plumbing Logo" className="h-20 w-auto" />
             </div>
 
             {/* Desktop Navigation */}
