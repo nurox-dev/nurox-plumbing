@@ -5,6 +5,14 @@ import { Menu, X, Phone, MapPin } from "lucide-react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navigation = [
     { name: "HOME", href: "#home" },
     { name: "SERVICES", href: "#services" },
@@ -49,6 +57,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleScroll(e, item.href)}
                   className="text-plumbing-dark hover:text-primary font-semibold text-xl transition-colors duration-300"
                 >
                   {item.name}
@@ -58,7 +67,10 @@ const Header = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button className="bg-plumbing-red hover:bg-plumbing-red/90 text-white px-8 py-3 rounded-lg text-lg font-bold transition-all duration-300 hover:shadow-hover">
+              <Button
+                onClick={(e) => handleScroll(e, "#contact")}
+                className="bg-plumbing-red hover:bg-plumbing-red/90 text-white px-8 py-3 rounded-lg text-lg font-bold transition-all duration-300 hover:shadow-hover"
+              >
                 Contact Now
               </Button>
             </div>
@@ -80,13 +92,22 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
+                    onClick={(e) => {
+                      handleScroll(e, item.href);
+                      setIsMenuOpen(false);
+                    }}
                     className="text-plumbing-dark hover:text-primary font-medium transition-colors duration-300"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 ))}
-                <Button className="bg-plumbing-red hover:bg-plumbing-red/90 text-white px-6 py-2 rounded-lg w-fit">
+                <Button
+                  onClick={(e) => {
+                    handleScroll(e, "#contact");
+                    setIsMenuOpen(false);
+                  }}
+                  className="bg-plumbing-red hover:bg-plumbing-red/90 text-white px-6 py-2 rounded-lg w-fit"
+                >
                   Contact Now
                 </Button>
               </nav>
